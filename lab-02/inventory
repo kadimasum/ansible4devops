@@ -1,0 +1,18 @@
+# Lines beginning with a # are comments, and are only included for
+# illustration. These comments are overkill for most inventory files.
+
+
+# Application servers
+[app]
+192.168.60.4 ansible_host=127.0.0.1 ansible_port=2222
+192.168.60.5 ansible_host=127.0.0.1 ansible_port=2222
+
+# Database server
+[db]
+192.168.60.6 ansible_host=127.0.0.1 ansible_port=2222
+
+# Group 'multi' with all servers
+[multi:children]
+app
+db
+
